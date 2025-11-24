@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17702833.svg)](https://doi.org/10.5281/zenodo.17702833)
+
 <img src="logo.png" alt="QmcFort Logo" width="300"/>
 
 # Quantum Monte Carlo with Fortran
