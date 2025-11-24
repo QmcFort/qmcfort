@@ -1,0 +1,10 @@
+write_files = 2
+file_format = numpy
+basis = mo
+integral_mode = eri
+
+hfock = .true.
+use_diis = .false.
+rdm_tol = 1.0e-08
+hf_tol = 1.0e-10
+ispin = 2

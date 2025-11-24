@@ -1,0 +1,7 @@
+# qmcfort_in_fs
+
+basis = mo
+frozen_core = .true.
+nfrozen = 6
+
+write_files = 2

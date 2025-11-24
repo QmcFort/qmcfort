@@ -1,0 +1,16 @@
+# qmcfort_in_hf
+
+integral_mode = cholesky
+chol_tol = 1.0E-05
+basis = ao_orth
+
+write_files = 2
+
+ispin = 2
+spin = 3
+
+hfock = .true.
+hf_maxiter = 100
+ldiis = .true.
+rdm_tol = 1.0E-06
+hf_tol = 1.0E-10

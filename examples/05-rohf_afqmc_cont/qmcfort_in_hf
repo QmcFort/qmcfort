@@ -1,0 +1,20 @@
+# qmcfort_in_hf
+
+integral_mode = cholesky
+chol_tol = 1.0E-05
+
+write_files = 2
+
+basis = mo
+
+frozen_core = .true. 
+
+ispin = 1
+spin = 2
+
+hfock = .true.
+hf_maxiter = 100
+ldiis = .false.
+rdm_mix = 1.0
+rdm_tol = 1.0E-06
+hf_tol = 1.0E-10

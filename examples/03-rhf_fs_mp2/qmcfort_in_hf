@@ -1,0 +1,9 @@
+# qmcfort_in_hf
+
+hfock = .true.
+hf_maxiter = 100
+ldiis = .true.
+rdm_tol = 1.0E-06
+hf_tol = 1.0E-10
+
+write_files = 1

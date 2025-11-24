@@ -1,0 +1,47 @@
+
+						Unit tests for MAK program
+
+Uses FRUIT and FRUITpy for unit tests
+
+If python is not avialable, pure fortran will be used
+
+For more info about FRUIT and FRUITpy, read:
+	https://sourceforge.net/projects/fortranxunit/
+	https://github.com/mortele/FRUIT
+	https://github.com/acroucher/FRUITPy
+
+
+					MAK/unit_tests/
+						|
+						|
+		-----------------------------------------------------------------
+		|		|		|		|		|	
+	     fruit/	  fruit_drivers/      vers/	    makefile 	      README	
+		|               |
+	        |    		|------------------------
+                |               |   	   |            |
+	 test_module.f90     fruit.py   makefile  fruit_driver.f90
+
+
+fruit/
+	Contains unit-test routines for module routines from MAK/src/<module>.f90
+	If <module>.f90 is tested, the name of the file in MAK/unit_tests/fruit/ should be test_<module>.f90
+
+fruit_drivers/
+	Contains following files: fruit.f90 fruit.py fruit_driver.f90 and Makefile
+	fruit.f90 		- FRUIT source code
+	fruit.py  		- python script to run FRUITpy interface
+	Makefile 		- Makefile to compile unit tests. Usually called by fruit.py
+	fruit_driver.f90	- driver to run unit-tests. This is manual version used if FRUITpy is not avilable. 
+				  Usually created by fruit.py
+
+vers/
+	Compiled version of unit-tests
+
+makefile
+	makefile to run unit tests.
+	Usage:
+		make vers		(vers = std / cmx)
+
+README
+	Documentation about unit-tests.

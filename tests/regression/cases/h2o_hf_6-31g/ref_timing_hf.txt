@@ -1,0 +1,173 @@
+ 
+ 
+      Time Profiling - graph - elapsed time:
+ ************************************************************
+        routine Name                            ncalls  self time                     acc time                   
+        ============                            ======  =========                     ========                   
+   read_files                                        1  0.004155s                     0.084348s                                       
+     set_gauss_integrals                             1    0.000387s                     0.080192s                                     
+       gauss_int_1e                                 81      0.000567s                     0.005109s                                   
+         mc_murchie_overlap                        484        0.000278s                     0.000568s                                 
+           overlap_exp_coeff                      1452          0.000290s                     0.000290s                               
+         mc_murchie_kinetic                        484        0.000368s                     0.000753s                                 
+           overlap_exp_coeff                      1452          0.000385s                     0.000385s                               
+         mc_murchie_coulomb_1e                     484        0.000593s                     0.003221s                                 
+           overlap_exp_coeff                      1452          0.000284s                     0.000284s                               
+           full_overlap_exp_coeff                  484          0.000129s                     0.000129s                               
+           hermite_integral_shell                 1452          0.000664s                     0.000664s                               
+           contract_hermite_1e                     484          0.001551s                     0.001551s                               
+       cholesky_gauss                                1      0.003820s                     0.074696s                                   
+         gauss_int_2e                               16        0.000023s                     0.003175s                                 
+           prim_cont_2e                             16          0.000326s                     0.003128s                               
+             mc_murchie_coulomb_2e                1521            0.000829s                     0.002803s                             
+               overlap_exp_coeff                  2538              0.000526s                     0.000526s                           
+               full_overlap_exp_coeff              846              0.000273s                     0.000273s                           
+               hermite_integral_shell              423              0.000321s                     0.000321s                           
+               contract_hermite_2e                 423              0.000378s                     0.000854s                           
+                 g_cd_tuv                          423                0.000194s                     0.000194s                         
+                 g_abcd                            423                0.000165s                     0.000165s                         
+                 g_abcd_reshape                    423                0.000118s                     0.000118s                         
+           transform_ham2                           16          0.000024s                     0.000024s                               
+         collect_int_2e_sh                          70        0.004550s                     0.066725s                                 
+           gauss_int_2e                            570          0.000674s                     0.062175s                               
+             prim_cont_2e                          570            0.006701s                     0.060684s                             
+               mc_murchie_coulomb_2e             26595              0.016374s                     0.053983s                           
+                 overlap_exp_coeff               36882                0.007896s                     0.007896s                         
+                 full_overlap_exp_coeff          12294                0.004202s                     0.004202s                         
+                 hermite_integral_shell          11268                0.007202s                     0.007202s                         
+                 contract_hermite_2e             11268                0.009009s                     0.018309s                         
+                   g_cd_tuv                      11268                  0.003230s                     0.003230s                       
+                   g_abcd                        11268                  0.002985s                     0.002985s                       
+                   g_abcd_reshape                11268                  0.003086s                     0.003086s                       
+             transform_ham2                        570            0.000817s                     0.000817s                             
+         add_to_h2                                  11        0.000114s                     0.000976s                                 
+           chol_gemm                                11          0.000769s                     0.000769s                               
+           chol_rest                                11          0.000093s                     0.000093s                               
+   do_hartree_fock                                   1  0.021147s                     0.021709s                                       
+     calculate_rdm                                  12    0.000057s                     0.000057s                                     
+     get_h2_gres_ob                                 24    0.000005s                     0.000005s                                     
+     calculate_gse                                  12    0.000009s                     0.000009s                                     
+     transform_fock_matrix                          11    0.000034s                     0.000034s                                     
+     diagonalize_fock_matrix                        11    0.000368s                     0.000368s                                     
+     transform_orbitals                             11    0.000019s                     0.000019s                                     
+     check_scf_convergence                          11    0.000072s                     0.000072s                                     
+   write_ham_files                                   1  0.001573s                     0.001573s                                       
+ ***************************************************************************
+ 
+ 
+      Time Profiling - graph - percentage :
+ ************************************************************
+        routine Name                            ncalls  self time %                   acc time %                  
+        ============                            ======  ===========                   ==========                  
+   read_files                                        1  4.93%                         75.80%                                          
+     set_gauss_integrals                             1    0.48%                         95.07%                                        
+       gauss_int_1e                                 81      11.10%                        6.37%                                       
+         mc_murchie_overlap                        484        48.96%                        11.12%                                    
+           overlap_exp_coeff                      1452          100.00%                       51.04%                                  
+         mc_murchie_kinetic                        484        48.88%                        14.74%                                    
+           overlap_exp_coeff                      1452          100.00%                       51.12%                                  
+         mc_murchie_coulomb_1e                     484        18.40%                        63.04%                                    
+           overlap_exp_coeff                      1452          100.00%                       8.81%                                   
+           full_overlap_exp_coeff                  484          100.00%                       4.02%                                   
+           hermite_integral_shell                 1452          100.00%                       20.61%                                  
+           contract_hermite_1e                     484          100.00%                       48.15%                                  
+       cholesky_gauss                                1      5.11%                         93.15%                                      
+         gauss_int_2e                               16        0.72%                         4.25%                                     
+           prim_cont_2e                             16          10.41%                        98.52%                                  
+             mc_murchie_coulomb_2e                1521            29.58%                        89.59%                                
+               overlap_exp_coeff                  2538              100.00%                       18.76%                              
+               full_overlap_exp_coeff              846              100.00%                       9.74%                               
+               hermite_integral_shell              423              100.00%                       11.44%                              
+               contract_hermite_2e                 423              44.24%                        30.49%                              
+                 g_cd_tuv                          423                100.00%                       22.69%                            
+                 g_abcd                            423                100.00%                       19.28%                            
+                 g_abcd_reshape                    423                100.00%                       13.79%                            
+           transform_ham2                           16          100.00%                       0.76%                                   
+         collect_int_2e_sh                          70        6.82%                         89.33%                                    
+           gauss_int_2e                            570          1.08%                         93.18%                                  
+             prim_cont_2e                          570            11.04%                        97.60%                                
+               mc_murchie_coulomb_2e             26595              30.33%                        88.96%                              
+                 overlap_exp_coeff               36882                100.00%                       14.63%                            
+                 full_overlap_exp_coeff          12294                100.00%                       7.78%                             
+                 hermite_integral_shell          11268                100.00%                       13.34%                            
+                 contract_hermite_2e             11268                49.20%                        33.92%                            
+                   g_cd_tuv                      11268                  100.00%                       17.64%                          
+                   g_abcd                        11268                  100.00%                       16.30%                          
+                   g_abcd_reshape                11268                  100.00%                       16.85%                          
+             transform_ham2                        570            100.00%                       1.31%                                 
+         add_to_h2                                  11        11.71%                        1.31%                                     
+           chol_gemm                                11          100.00%                       78.78%                                  
+           chol_rest                                11          100.00%                       9.52%                                   
+   do_hartree_fock                                   1  97.41%                        19.51%                                          
+     calculate_rdm                                  12    100.00%                       0.26%                                         
+     get_h2_gres_ob                                 24    100.00%                       0.02%                                         
+     calculate_gse                                  12    100.00%                       0.04%                                         
+     transform_fock_matrix                          11    100.00%                       0.16%                                         
+     diagonalize_fock_matrix                        11    100.00%                       1.69%                                         
+     transform_orbitals                             11    100.00%                       0.09%                                         
+     check_scf_convergence                          11    100.00%                       0.33%                                         
+   write_ham_files                                   1  100.00%                       1.41%                                           
+ ***************************************************************************
+ 
+ 
+      Time Profiling - flat - elapsed time:
+ ************************************************************
+   cnt          routine name               ncalls        self time     % self    acc time       % acc     atime/call   
+   ===          ============               ======        =========     ======    ========       =====     ==========   
+     1   do_hartree_fock                        1     0.021147s       19.00%   0.021709s       19.51%   0.021709s                                         
+     2   mc_murchie_coulomb_2e              28116     0.017203s       15.46%   0.056786s       51.03%   0.000002s                                         
+     3   contract_hermite_2e                11691     0.009387s        8.44%   0.019164s       17.22%   0.000002s                                         
+     4   overlap_exp_coeff                  43776     0.009380s        8.43%   0.009380s        8.43%   0.000000s                                         
+     5   hermite_integral_shell             13143     0.008187s        7.36%   0.008187s        7.36%   0.000001s                                         
+     6   prim_cont_2e                         586     0.007027s        6.31%   0.063812s       57.34%   0.000109s                                         
+     7   full_overlap_exp_coeff             13624     0.004604s        4.14%   0.004604s        4.14%   0.000000s                                         
+     8   collect_int_2e_sh                     70     0.004550s        4.09%   0.066725s       59.96%   0.000953s                                         
+     9   read_files                             1     0.004155s        3.73%   0.084348s       75.80%   0.084348s                                         
+    10   cholesky_gauss                         1     0.003820s        3.43%   0.074696s       67.13%   0.074696s                                         
+    11   QMCFORT                                1     0.003649s        3.28%   0.111279s      100.00%   0.111279s                                         
+    12   g_cd_tuv                           11691     0.003423s        3.08%   0.003423s        3.08%   0.000000s                                         
+    13   g_abcd_reshape                     11691     0.003204s        2.88%   0.003204s        2.88%   0.000000s                                         
+    14   g_abcd                             11691     0.003150s        2.83%   0.003150s        2.83%   0.000000s                                         
+    15   write_ham_files                        1     0.001573s        1.41%   0.001573s        1.41%   0.001573s                                         
+    16   contract_hermite_1e                  484     0.001551s        1.39%   0.001551s        1.39%   0.000003s                                         
+    17   transform_ham2                       586     0.000841s        0.76%   0.000841s        0.76%   0.000001s                                         
+    18   chol_gemm                             11     0.000769s        0.69%   0.000769s        0.69%   0.000070s                                         
+    19   gauss_int_2e                         586     0.000697s        0.63%   0.065350s       58.73%   0.000112s                                         
+    20   mc_murchie_coulomb_1e                484     0.000593s        0.53%   0.003221s        2.89%   0.000007s                                         
+    21   gauss_int_1e                          81     0.000567s        0.51%   0.005109s        4.59%   0.000063s                                         
+    22   set_gauss_integrals                    1     0.000387s        0.35%   0.080192s       72.06%   0.080192s                                         
+    23   mc_murchie_kinetic                   484     0.000368s        0.33%   0.000753s        0.68%   0.000002s                                         
+    24   diagonalize_fock_matrix               11     0.000368s        0.33%   0.000368s        0.33%   0.000033s                                         
+    25   mc_murchie_overlap                   484     0.000278s        0.25%   0.000568s        0.51%   0.000001s                                         
+    26   add_to_h2                             11     0.000114s        0.10%   0.000976s        0.88%   0.000089s                                         
+    27   chol_rest                             11     0.000093s        0.08%   0.000093s        0.08%   0.000008s                                         
+    28   check_scf_convergence                 11     0.000072s        0.06%   0.000072s        0.06%   0.000007s                                         
+    29   calculate_rdm                         12     0.000057s        0.05%   0.000057s        0.05%   0.000005s                                         
+    30   transform_fock_matrix                 11     0.000034s        0.03%   0.000034s        0.03%   0.000003s                                         
+    31   transform_orbitals                    11     0.000019s        0.02%   0.000019s        0.02%   0.000002s                                         
+    32   calculate_gse                         12     0.000009s        0.01%   0.000009s        0.01%   0.000001s                                         
+    33   get_h2_gres_ob                        24     0.000005s        0.00%   0.000005s        0.00%   0.000000s                                         
+ ***************************************************************************
+ 
+ 
+      Time Profiling - FLOPS report  
+ ************************************************************
+   cnt     routine name                    ncalls      acc time       atime/call       FLOPS/core  
+   ===     ============                    ======      ========       ==========       ==========  
+     1   g_cd_tuv                           11691     0.003423s      0.000000s       526.0MFLOPS                                      
+     2   g_abcd                             11691     0.003150s      0.000000s       148.2MFLOPS                                      
+ 
+    average FLOPS/core                                                               344.9MFLOPS
+ ***************************************************************************
+ 
+                   ==================================================
+ 
+                        Total elapsed time         =  0.111279s                                                   
+                        Total cpu time             =  0.732757s                                                   
+                        Ratio cpu / elapsed time   =      6.58
+ 
+                        Time for measuring timers  =  0.019388s                                                   
+                        Time for writing timings   =  0.002136s                                                   
+                   ==================================================
+ 
+ ***************************************************************************

@@ -1,0 +1,345 @@
+ ***************************************************************************
+ ***                                                                     ***
+ ***                            Q m c F o r t                            ***
+ ***                   Quantum Monte Carlo with Fortran                  ***
+ ***                                                                     ***
+ ***   started at: Nov 15 2025  20:44:13                                 ***
+ ***   built at  : Nov 15 2025  20:17:39                                 ***
+ ***   version   : 07ab228                                               ***
+ ***                                                                     ***
+ ***************************************************************************
+ MPI Communicator information:
+ -----------------------------
+   Number of MPI processes      =      4
+ 
+   OpenMP allowed?              =    T
+   Allowed no. of OpenMP levels =      2
+   Number of OpenMP threads     =      1
+   Number of BLAS threads       =      1
+ 
+   Total number of comp. units  =      4
+ ***************************************************************************
+ 
+ Molecular Geometry:
+ -------------------
+   number of atoms                               =    3
+   number of atomic species                      =    2
+   atomic species                                =  Be H
+   coordinate units                              = A
+   coordinates:
+       atom        x         y         z       Zeff   
+       ====        =         =         =       ====   
+        Be      0.000000  0.000000  0.000000  4.000000
+        H       0.000000  0.000000  1.338446  1.000000
+        H       0.000000  0.000000 -1.338446  1.000000
+ 
+ Basic Random Number Generator:
+ ------------------------------
+   brng       = LCG48
+   brng_seed  = 167901165
+ 
+ Information about system:
+    Number of basis functions     n          =            24
+    Number of electrons           nelect     =             6
+    Number of up electrons        nelect_a   =             3
+    Number of beta electrons      nelect_b   =             3
+    Number of occupied states     nocc       =             3
+    Sz spin component             spin       =             0
+    Spin dimension                ispin      =             1
+    Spin dimension 1              ispin1     =             1
+    Spin dimension 2              ispin2     =             1
+    Spin dimension FOCK           ispin_fock =             1
+    Spin multiplicity             rspin      =             2
+ ***************************************************************************
+ Memory reqirements in AFQMC:
+ ---------------------------------------------
+     Walkers              :    3.3MB
+     Hamiltonian          :    2.6MB
+     Trial wave function  :    2.6MB
+     AfqmcEnergy          :  130.6KB
+     Propagators          :    3.8MB
+     -----------------------------------------
+     Total                :   12.4MB
+ 
+ ************************************************************
+ AFQMC runtime estimation:
+ ---------------------------------------------
+     FLOP estimate for AFQMC propagation :   67.2GFLOP
+     FLOP estimate for AFQMC energy eval :   28.6GFLOP
+     -----------------------------------------
+     Total FLOP estimate in AFQMC        :   95.8GFLOP
+ 
+     average performance assumed         : 10 GFLOPS per core
+     Total runtime                       :   2.40s
+ 
+ ************************************************************
+ 
+ AFQMC Setup
+ ************************************************************
+ AFQMC descriptor:
+ afqmc mc controll variables:
+    timestep                                     =     0.050000
+    total proapgation time                       =    30.000000
+    number of blocks                             =       20
+    steps per block                              =       20
+    total number of steps                        =      600
+    print to the screen                          =        1
+    energy Sampling                              =        1
+    exchange energy Sampling                     =        1
+    reorthogonalization                          =        1
+    population control                           =        5
+    preserved weight                             =      F
+    minimal weight allowed                       =     0.100000
+    maximal weight allowed                       =     3.000000
+    number of afqmc walkers                      =      300
+    number of afqmc walkers per proc             =       75
+ 
+ Importance sampling setup:
+ --------------------------
+   subtract mean field                           =  T
+   importance sampling shift                     = mix                                                         
+   importance sampling scale                     = none                                                        
+   importance sampling cut shift                 = remove                                                      
+   importance sampling shift cutoff              =       1.0000
+ 
+ Random fields / Auxiliary potential setup (AuxFieldGen):
+ --------------------------------------------------------
+   distribution of the random fields             = normal                                                      
+   number of fields for the propagation          =      138
+ 
+ AFQMC Propagator (AfqmcProp):
+ -----------------------------
+   propagator                                    = s2
+   expm                                          = krylov
+   expm_order                                    =      6
+ 
+ Afqmc Projection (AfqmcProj):
+ -----------------------------
+   projection                                    = free                                                        
+   auto_hybrid                                   =  F
+   hybrid                                        =       1.0000
+   mix                                           =       1.0000
+   min_cos_hp                                    =      -0.5000
+   accept reject                                 =  F
+ 
+ Trial wave function descriptor
+ -------------------------------
+    trial wave function type                     = WaveTrialSD
+    size of the object                           =  641.3KB                                                    
+    Exchange energy mode                         = cholesky                                                    
+    block size for Hartree terms                 =       75
+    block size for exchange terms                =        5
+ 
+ trial_energy of the electronic-ionic system:
+ ---------------------------------------------------------
+ contribution                     Re E            Im E    
+ ------------                     ----            ----    
+ trial_enuc =                    3.36061867
+ trial_e0   =                    0.00000000
+ trial_e1   =                  -27.02576458    0.00000000
+ trial_eh   =                   11.34526046    0.00000000
+ trial_ex   =                   -3.44747472    0.00000000
+ trial_e    =                  -19.12797883    0.00000000
+ trial_etot =                  -15.76736016    0.00000000
+ 
+ init_energy of the electronic-ionic system:
+ ---------------------------------------------------------
+ contribution                     Re E            Im E    
+ ------------                     ----            ----    
+ init_enuc =                     3.36061867
+ init_e0   =                     0.00000000
+ init_e1   =                   -27.02576458    0.00000000
+ init_eh   =                    11.34526046    0.00000000
+ init_ex   =                    -3.44747472    0.00000000
+ init_e    =                   -19.12797883    0.00000000
+ init_etot =                   -15.76736016    0.00000000
+ Rare Events setup
+ -----------------
+      rare events activated                      =      T
+      phase capping                              =      T
+      overlap ratio capping                      =      F
+      phase change capping                       =      F
+      local energy capping                       =      T
+      hybrid energy capping                      =      F
+      importance weight capping                  =      T
+      weight capping                             =      T
+ 
+ Start AFQMC propagation
+    tag     step      time     B Re W   B Im W     B Re El   B Im El   B SD El    T Re El    T SD El    SDM El      B Re Eh   B Im Eh   B SD Eh    T Re Eh    T SD Eh    SDM Eh       Eg     B <S>    T <S>  
+    ---     ----      ----     ------   ------     -------   -------   -------    -------    -------    ------      -------   -------   -------    -------    -------    ------       --     -----    -----  
+ afqmc:e:        0     0.0000   1.0000   0.0000   -15.767360   0.0000   0.0000   -15.767360   0.0000  0.0000E+00   -15.767360   0.0000   0.0000   -15.767360   0.0000  0.0000E+00    0.0000  1.0000   1.0000
+ afqmc:e:       20     1.0000   1.0005  -0.0002   -15.805677  -0.0001   0.0298   -15.805677   0.0298  0.0000E+00   -15.812185  -0.0198   8.0969   -15.812185   8.0969  0.0000E+00   -0.0276  0.9998   0.9998
+ afqmc:e:       40     2.0000   0.9971  -0.0013   -15.826571   0.0006   0.0457   -15.816114   0.0400  0.0000E+00   -15.824213   0.0563   7.3672   -15.818202   7.7417  0.0000E+00    0.0039  0.9992   0.9995
+ afqmc:e:       60     3.0000   0.9980  -0.0030   -15.834555   0.0013   0.0587   -15.822250   0.0478  0.0000E+00   -15.832217   0.1057   7.4424   -15.822947   7.6441  0.0000E+00   -0.0104  0.9980   0.9990
+ afqmc:e:       80     4.0000   0.9968  -0.0059   -15.833536  -0.0005   0.0826   -15.825068   0.0586  0.0000E+00   -15.849784   0.0237   6.2600   -15.829584   7.3231  0.0000E+00   -0.0152  0.9963   0.9983
+ afqmc:e:      100     5.0000   0.9948   0.0011   -15.834562  -0.0008   0.0653   -15.826962   0.0601  0.0000E+00   -15.852561  -0.0197   6.2808   -15.833978   7.1274  0.0000E+00   -0.0135  0.9938   0.9974
+ afqmc:e:      120     6.0000   0.9946   0.0010   -15.839579   0.0024   0.1134   -15.829056   0.0719  0.0000E+00   -15.866731   0.0393   5.0974   -15.839514   6.8341  0.0000E+00   -0.0402  0.9926   0.9966
+ afqmc:e:      140     7.0000   0.9899   0.0046   -15.838018   0.0003   0.0822   -15.830316   0.0742  0.0000E+00   -15.848797  -0.0850   6.8441   -15.840590   6.8357  0.0000E+00   -0.0073  0.9909   0.9958
+ afqmc:e:      160     8.0000   0.9889   0.0035   -15.837144  -0.0014   0.0666   -15.831168   0.0733  0.0000E+00   -15.843250  -0.0349   6.4741   -15.840888   6.7919  0.0000E+00    0.0060  0.9884   0.9949
+ afqmc:e:      180     9.0000   0.9862   0.0028   -15.836171  -0.0002   0.0624   -15.831717   0.0722  0.0000E+00   -15.856635  -0.0215   6.7359   -15.842593   6.7858  0.0000E+00   -0.0079  0.9863   0.9939
+ afqmc:e:      200    10.0000   0.9853   0.0074   -15.836055  -0.0016   0.0700   -15.832144   0.0720  0.0000E+00   -15.865956   0.0359   6.4764   -15.844921   6.7557  0.0000E+00   -0.0054  0.9847   0.9930
+ Start AFQMC propagation - Sampling phase:
+    tag     step      time     B Re W   B Im W     B Re El   B Im El   B SD El    T Re El    T SD El    SDM El      B Re Eh   B Im Eh   B SD Eh    T Re Eh    T SD Eh    SDM Eh       Eg     B <S>    T <S>  
+    ---     ----      ----     ------   ------     -------   -------   -------    -------    -------    ------      -------   -------   -------    -------    -------    ------       --     -----    -----  
+ afqmc:s:      220    11.0000   0.9831   0.0124   -15.836715  -0.0005   0.0703   -15.836715   0.0703  0.0000E+00   -15.835717   0.0354   6.4784   -15.835717   6.4784  0.0000E+00   -0.0024  0.9829   0.9829
+ afqmc:s:      240    12.0000   0.9826   0.0132   -15.833811   0.0018   0.1680   -15.835227   0.1282  1.7818E-03   -15.827946  -0.1024   7.0048   -15.832060   6.7469  6.8870E-02   -0.0138  0.9823   0.9826
+ afqmc:s:      260    13.0000   0.9809   0.0159   -15.839136   0.0016   0.0701   -15.836551   0.1120  1.6714E-03   -15.856372  -0.0365   8.4916   -15.840180   7.3740  4.0637E-02   -0.0162  0.9808   0.9820
+ afqmc:s:      280    14.0000   0.9768   0.0144   -15.834570   0.0003   0.0887   -15.836066   0.1066  1.2968E-03   -15.827351  -0.0537   6.2331   -15.837308   7.1102  2.9387E-02   -0.0174  0.9778   0.9810
+ afqmc:s:      300    15.0000   0.9747   0.0133   -15.837707  -0.0026   0.1077   -15.836393   0.1061  1.2591E-03   -15.851393   0.1525   6.9228   -15.840019   7.0766  4.4822E-02    0.0027  0.9761   0.9800
+ afqmc:s:      320    16.0000   0.9734   0.0088   -15.838371   0.0011   0.0789   -15.836719   0.1015  1.0876E-03   -15.822926  -0.0091   7.8332   -15.837374   7.2049  3.6742E-02    0.0015  0.9735   0.9789
+ afqmc:s:      340    17.0000   0.9739   0.0088   -15.840550  -0.0037   0.0769   -15.837265   0.0983  1.2144E-03   -15.833084  -0.0652   6.3126   -15.836753   7.0848  3.2311E-02   -0.0225  0.9734   0.9781
+ afqmc:s:      360    18.0000   0.9726   0.0192   -15.843453  -0.0032   0.0813   -15.838032   0.0964  1.3573E-03   -15.858673   0.0493   7.1119   -15.839621   7.0886  2.9124E-02    0.0003  0.9724   0.9774
+ afqmc:s:      380    19.0000   0.9692   0.0077   -15.839185   0.0006   0.0885   -15.838160   0.0953  1.2132E-03   -15.886561  -0.1730   6.4022   -15.844850   7.0159  3.2199E-02    0.0020  0.9695   0.9765
+ afqmc:s:      400    20.0000   0.9688   0.0026   -15.838475   0.0034   0.0677   -15.838185   0.0929  1.1530E-03   -15.842544   0.0111   6.4559   -15.844585   6.9641  2.9150E-02   -0.0053  0.9677   0.9756
+ afqmc:s:      420    21.0000   0.9680   0.0020   -15.836518   0.0009   0.0636   -15.838036   0.0907  1.0587E-03   -15.847118   0.0213   7.7749   -15.844673   7.0433  2.6616E-02    0.0115  0.9680   0.9749
+ afqmc:s:      440    22.0000   0.9661   0.0107   -15.837158  -0.0028   0.0663   -15.837963   0.0889  9.9710E-04   -15.858031  -0.0067   8.6285   -15.845711   7.1872  2.4345E-02    0.0058  0.9655   0.9741
+ afqmc:s:      460    23.0000   0.9628   0.0210   -15.838557   0.0017   0.0659   -15.838009   0.0874  9.3121E-04   -15.860468  -0.0163   6.2034   -15.846780   7.1175  2.2429E-02    0.0120  0.9638   0.9733
+ afqmc:s:      480    24.0000   0.9614   0.0246   -15.834362   0.0002   0.0708   -15.837753   0.0863  9.0104E-04   -15.818780   0.1391   7.6977   -15.844989   7.1617  2.3600E-02   -0.0080  0.9613   0.9725
+ afqmc:s:      500    25.0000   0.9600   0.0300   -15.837497  -0.0020   0.1649   -15.837733   0.0927  8.4915E-04   -15.849617   0.0333   6.5281   -15.845252   7.1207  2.2180E-02   -0.0151  0.9598   0.9716
+ afqmc:s:      520    26.0000   0.9544   0.0284   -15.840875   0.0008   0.1450   -15.837935   0.0964  8.1971E-04   -15.888133  -0.0055   6.4984   -15.847864   7.0836  2.0931E-02   -0.0013  0.9570   0.9707
+ afqmc:s:      540    27.0000   0.9525   0.0209   -15.838343  -0.0023   0.0795   -15.837959   0.0955  7.8082E-04   -15.850668   0.0453   5.1962   -15.848049   6.9882  1.9870E-02    0.0029  0.9519   0.9696
+ afqmc:s:      560    28.0000   0.9476   0.0064   -15.834079   0.0052   0.1937   -15.837745   0.1028  8.2355E-04   -15.830345  -0.0989   6.6193   -15.847163   6.9687  1.9560E-02   -0.0123  0.9471   0.9683
+ afqmc:s:      580    29.0000   0.9411  -0.0038   -15.838074  -0.0016   0.0672   -15.837762   0.1013  7.8435E-04   -15.830575   0.0104   6.3807   -15.846311   6.9384  1.8548E-02    0.0041  0.9419   0.9669
+ afqmc:s:      600    30.0000   0.9419  -0.0085   -15.834092  -0.0038   0.0755   -15.837586   0.1002  7.8899E-04   -15.810330  -0.2212   6.9373   -15.844687   6.9377  2.0692E-02    0.0061  0.9425   0.9657
+ 
+ afqmc_energy of the electronic-ionic system:
+ ---------------------------------------------------------
+ contribution                     Re E            Im E          stddev      corr. length   stddev final 
+ ------------                     ----            ----          ------      ------------   ------------ 
+ afqmc_enuc =                    3.36061867
+ afqmc_e0   =                    0.00000000
+ afqmc_e1   =                  -27.03273890    0.00919232    1.137490E-03       39.79      7.175467E-03
+ afqmc_eh   =                   11.21205468   -0.01071889    1.520001E-03       36.66      9.203655E-03
+ afqmc_ex   =                   -3.37751662    0.00129258    5.138965E-04       16.09      2.061612E-03
+ afqmc_e    =                  -19.19820084   -0.00023399    2.902781E-04        8.61      8.515542E-04
+ afqmc_etot =                  -15.83758217   -0.00023399    2.902781E-04        8.61      8.515542E-04
+ 
+ afqmc_tnw_energy of the electronic-ionic system:
+ ---------------------------------------------------------
+ contribution                     Re E            Im E          stddev      corr. length   stddev final 
+ ------------                     ----            ----          ------      ------------   ------------ 
+ afqmc_tnw_enuc =                3.36061867
+ afqmc_tnw_e0   =                0.00000000
+ afqmc_tnw_e1   =              -27.03289377    0.00928455    1.140444E-03       34.67      6.715421E-03
+ afqmc_tnw_eh   =               11.21225588   -0.01083009    1.523589E-03       34.34      8.927719E-03
+ afqmc_tnw_ex   =               -3.37755760    0.00131667    5.141858E-04       15.73      2.039583E-03
+ afqmc_tnw_e    =              -19.19819549   -0.00022887    2.907831E-04        9.09      8.767862E-04
+ afqmc_tnw_etot =              -15.83757682   -0.00022887    2.907831E-04        9.09      8.767862E-04
+ 
+ afqmc_nw_energy of the electronic-ionic system:
+ ---------------------------------------------------------
+ contribution                     Re E            Im E          stddev      corr. length   stddev final 
+ ------------                     ----            ----          ------      ------------   ------------ 
+ afqmc_nw_enuc =                 3.36061867
+ afqmc_nw_e0   =                 0.00000000
+ afqmc_nw_e1   =               -27.03461845    0.00970333    1.070811E-03       30.66      5.929670E-03
+ afqmc_nw_eh   =                11.20396914   -0.00557923    5.015368E-03        3.77      9.734236E-03
+ afqmc_nw_ex   =                -3.37283933   -0.00171439    2.507061E-03        3.76      4.864097E-03
+ afqmc_nw_e    =               -19.20348865    0.00240970    2.593516E-03        4.00      5.190110E-03
+ afqmc_nw_etot =               -15.84286998    0.00240970    2.593516E-03        4.00      5.190110E-03
+ 
+ afqmc hybrid energy:
+ ---------------------------------------------------------
+ contribution                     Re E            Im E          stddev      corr. length   stddev final 
+ ------------                     ----            ----          ------      ------------   ------------ 
+ hyb_etot =                    -15.84468454   -0.01489759    2.057849E-02        0.93      1.988886E-02
+ 
+ afqmc time-non-weighted hybrid energy:
+ ---------------------------------------------------------
+ contribution                     Re E            Im E          stddev      corr. length   stddev final 
+ ------------                     ----            ----          ------      ------------   ------------ 
+ hyb_tnw_etot =                -19.20484109   -0.01503480    2.057200E-02        0.93      1.987813E-02
+ 
+ afqmc non-weighted hybrid energy:
+ ---------------------------------------------------------
+ contribution                     Re E            Im E          stddev      corr. length   stddev final 
+ ------------                     ----            ----          ------      ------------   ------------ 
+ hyb_nw_etot =                 -15.83525379   -0.01418084    2.042858E-02        0.94      1.985594E-02
+ 
+ *************** Local and Hybrid energy distributions **************
+ SD Eloc           =     0.100165
+ SD Ehyb           =     6.937692
+ SD Eloc / SD Ehyb =     0.014438
+ Var(Eloc)/<Eloc>  =  5.2260E-04
+ Var(Ehyb)/<Ehyb>  =  2.5062E+00
+ 
+ Rare events statistics:
+ -----------------------
+ phaseless rare events             =      T
+   # of rare events                =          5         5    0.03%%                                                   
+ 
+ overlap ratio capping             =      F
+   sampled mean                    =       1.000094      1.000075
+   sampled stddev                  =       0.029197      0.029056
+   capping width                   =       0.136931
+   capping ratio                   =       5.000000
+   # of rare events upper          =          0         0    0.00%%                                                   
+   # of rare events lower          =          0         0    0.00%%                                                   
+ 
+ phase change capping              =      F
+   sampled mean                    =       0.008221      0.000005
+   sampled stddev                  =       0.008466      0.013039
+   capping width                   =       0.055902
+   capping ratio                   =       5.000000
+   # of rare events upper          =          0         0    0.00%%                                                   
+   # of rare events lower          =          0         0    0.00%%                                                   
+ 
+ persistent death events
+   maximal rare event lifetime     =      3
+   # of death events               =          0         0    0.00%%                                                   
+ 
+ weight rare events                =      T
+   upper value                     =      30.000000
+   # of rare events                =          0         0    0.00%%                                                   
+ 
+ local energy capping              =      T
+   sampled mean                    =     -19.198262    -19.193471
+   sampled stddev                  =       0.052926      0.058507
+   capping width                   =       6.024948
+   capping ratio                   =       1.000000
+   bare-capped local energy        =   1.623440E-04
+   # of rare events upper          =          3         3    0.02%%                                                   
+   # of rare events lower          =          8         6    0.03%%                                                   
+ 
+ hybrid energy capping             =      F
+   sampled mean                    =     -19.191196    -19.183195
+   sampled stddev                  =       0.591227      0.611361
+   capping width                   =       6.024948
+   capping ratio                   =       1.000000
+   bare-capped hybrid energy       =   0.000000E+00
+   # of rare events upper          =          0         0    0.00%%                                                   
+   # of rare events lower          =          0         0    0.00%%                                                   
+ 
+ imp function rare events          =      T
+   upper value                     =      10.000000
+   lower value                     =       0.005000
+   # of rare events  upper         =          1         0    0.00%%                                                   
+   # od rare events lower          =          0         0    0.00%%                                                   
+ 
+ Accept/Reject step
+   acceptance rate                 =          0    0.00%%                                                   
+   maximal rare event lifetime     =     50
+   # of death events               =          0         0    0.00%%                                                   
+ 
+ Cut shift mode                    = remove                                                      
+ Shift cutoff                      =       1.0000
+   total number of rare events     =         51
+          1 g index =          2 nrev =          9
+          2 g index =         16 nrev =          8
+          3 g index =         41 nrev =          8
+          4 g index =          8 nrev =          7
+          5 g index =         20 nrev =          7
+          6 g index =         40 nrev =          7
+          7 g index =          3 nrev =          4
+          8 g index =         21 nrev =          1
+ 
+ *************** Population control statistics **************
+ 
+ number of population controll calls         =      120
+ number of walkers sent around               =      925       7
+ maximal number of clones                    =        4
+ ***************************************************************************
+ 
+      finished at: Nov 15 2025  20:44:21
+ 
+ ***************************************************************************

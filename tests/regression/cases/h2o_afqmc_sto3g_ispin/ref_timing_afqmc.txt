@@ -1,0 +1,291 @@
+ 
+ 
+      Time Profiling - graph - elapsed time:
+ ************************************************************
+        routine Name                            ncalls  self time                     acc time                   
+        ============                            ======  =========                     ========                   
+   read_files                                        1  0.007674s                     0.007696s                                       
+     get_h2_gres_2d                                  1    0.000022s                     0.000022s                                     
+   write_ham_files                                   1  0.000001s                     0.000001s                                       
+   do_afqmc                                          1  0.203000s                     3.23s                                           
+     setup_afqmc_hamiltonian                         1    0.008290s                     0.008803s                                     
+       get_h1phi_occ                                 2      0.000006s                     0.000006s                                   
+       get_h2phi                                     1      0.000014s                     0.000046s                                   
+         gemm_h2phi                                 52        0.000032s                     0.000032s                                 
+       get_hselfphi                                  1      0.000032s                     0.000107s                                   
+         gemm_hself                                 52        0.000036s                     0.000036s                                 
+         gemm_hselfphi                              52        0.000039s                     0.000039s                                 
+       get_h2phi_h_occ                               2      0.000012s                     0.000012s                                   
+       get_h2phi_x_occ_chol                          1      0.000019s                     0.000019s                                   
+       local_energy_gres_sd                          2      0.000007s                     0.000322s                                   
+         biorth_orb                                  2        0.000015s                     0.000166s                                 
+           ovlp_matrix                               4          0.000021s                     0.000021s                               
+           inverse_ovlp                              4          0.000085s                     0.000085s                               
+           gemm_biorth                               4          0.000045s                     0.000045s                               
+         h1_mean_no                                  2        0.000008s                     0.000008s                                 
+         lgmean_no                                   4        0.000030s                     0.000061s                                 
+           gemm_lgmean                               8          0.000031s                     0.000031s                               
+         exchange_energy_no_chol                     2        0.000012s                     0.000080s                                 
+           gemm_en                                   4          0.000057s                     0.000057s                               
+           alpha_g_ij                                4          0.000011s                     0.000011s                               
+       get_h2_gres_ob                                2      0.000001s                     0.000001s                                   
+     afqmc_walker_factory_coeff                      1    0.000275s                     0.000397s                                     
+       get_overlap_sd                                1      0.000001s                     0.000032s                                   
+         get_overlap                                 1        0.000017s                     0.000031s                                 
+           ovlp_matrix                               2          0.000014s                     0.000014s                               
+       local_energy_gres_sd                          1      0.000003s                     0.000089s                                   
+         biorth_orb                                  1        0.000003s                     0.000019s                                 
+           ovlp_matrix                               2          0.000004s                     0.000004s                               
+           inverse_ovlp                              2          0.000007s                     0.000007s                               
+           gemm_biorth                               2          0.000006s                     0.000006s                               
+         h1_mean_no                                  1        0.000005s                     0.000005s                                 
+         lgmean_no                                   2        0.000012s                     0.000029s                                 
+           gemm_lgmean                               4          0.000017s                     0.000017s                               
+         exchange_energy_no_chol                     1        0.000005s                     0.000033s                                 
+           gemm_en                                   2          0.000022s                     0.000022s                               
+           alpha_g_ij                                2          0.000006s                     0.000006s                               
+     update_afqmc_energy                           751    0.228870s                     0.228870s                                     
+     local_energy_gres_sd                            4    0.000007s                     0.000202s                                     
+       biorth_orb                                    4      0.000009s                     0.000051s                                   
+         ovlp_matrix                                 8        0.000019s                     0.000019s                                 
+         inverse_ovlp                                8        0.000013s                     0.000013s                                 
+         gemm_biorth                                 8        0.000010s                     0.000010s                                 
+       h1_mean_no                                    4      0.000009s                     0.000009s                                   
+       lgmean_no                                     8      0.000021s                     0.000057s                                   
+         gemm_lgmean                                16        0.000035s                     0.000035s                                 
+       exchange_energy_no_chol                       4      0.000014s                     0.000078s                                   
+         gemm_en                                     8        0.000046s                     0.000046s                                 
+         alpha_g_ij                                  8        0.000017s                     0.000017s                                 
+     afqmc_mean_el                                  14    0.000209s                     0.000209s                                     
+     afqmc_mean_el_sd                               12    0.000034s                     0.000128s                                     
+       afqmc_mean_el                                12      0.000095s                     0.000095s                                   
+     afqmc_mean_el_sdm                              12    0.000375s                     0.000375s                                     
+     propagate_walkers                             500    0.525301s                     1.23s                                         
+       setup_auxiliary_field                       500      0.190001s                     0.232346s                                   
+         setup_aux_pot                             500        0.000901s                     0.042345s                                 
+           gemm_fields                             500          0.041444s                     0.041444s                               
+       gemm_expm                                600000      0.475032s                     0.475032s                                   
+     calculate_observables                         500    0.019961s                     0.929058s                                     
+       batch_walkers                               500      0.012100s                     0.012100s                                   
+       get_overlap_sd                              500      0.000539s                     0.108208s                                   
+         get_overlap                               500        0.058269s                     0.107669s                                 
+           ovlp_matrix                            1000          0.049400s                     0.049400s                               
+       h2_gres_mean_sd                             250      0.001653s                     0.247607s                                   
+         biorth_orb                                250        0.039132s                     0.212481s                                 
+           ovlp_matrix                           50000          0.070340s                     0.070340s                               
+           inverse_ovlp                          50000          0.059765s                     0.059765s                               
+           gemm_biorth                           50000          0.043243s                     0.043243s                               
+         lgmean_no                                 250        0.006275s                     0.033474s                                 
+           gemm_lgmean                             500          0.027199s                     0.027199s                               
+       unbatch_walkers                             500      0.010623s                     0.010623s                                   
+       local_energy_sd                             250      0.004352s                     0.530560s                                   
+         biorth_orb                                250        0.039070s                     0.211410s                                 
+           ovlp_matrix                           50000          0.070129s                     0.070129s                               
+           inverse_ovlp                          50000          0.059264s                     0.059264s                               
+           gemm_biorth                           50000          0.042947s                     0.042947s                               
+         h1_mean_no                                250        0.007821s                     0.007821s                                 
+         lgmean_no                                 500        0.008651s                     0.059710s                                 
+           gemm_lgmean                            1000          0.051059s                     0.051059s                               
+         exchange_energy_no_chol                   250        0.006789s                     0.247266s                                 
+           gemm_en                               10000          0.144203s                     0.144203s                               
+           alpha_g_ij                            10000          0.096275s                     0.096275s                               
+     accept_reject_walkers                         500    0.001885s                     0.001885s                                     
+     detect_rare_events                            500    0.008179s                     0.008179s                                     
+     update_walker_weights                         500    0.001334s                     0.001334s                                     
+     reorthogonalize_walkers                       500    0.221725s                     0.324715s                                     
+       ovlp_matrix                              100000      0.102990s                     0.102990s                                   
+     rebalance_walkers                             250    0.093920s                     0.093920s                                     
+     write_afqmc_chkpt                               4    0.200288s                     0.200288s                                     
+     afqmc_mean_el_sdm_tnw                           1    0.000040s                     0.000040s                                     
+     afqmc_mean_el_sdm_nw                            1    0.000031s                     0.000031s                                     
+ ***************************************************************************
+ 
+ 
+      Time Profiling - graph - percentage :
+ ************************************************************
+        routine Name                            ncalls  self time %                   acc time %                  
+        ============                            ======  ===========                   ==========                  
+   read_files                                        1  99.71%                        0.24%                                           
+     get_h2_gres_2d                                  1    100.00%                       0.29%                                         
+   write_ham_files                                   1  100.00%                       0.00%                                           
+   do_afqmc                                          1  6.28%                         99.61%                                          
+     setup_afqmc_hamiltonian                         1    94.17%                        0.27%                                         
+       get_h1phi_occ                                 2      100.00%                       0.07%                                       
+       get_h2phi                                     1      30.07%                        0.53%                                       
+         gemm_h2phi                                 52        100.00%                       69.93%                                    
+       get_hselfphi                                  1      29.60%                        1.22%                                       
+         gemm_hself                                 52        100.00%                       34.02%                                    
+         gemm_hselfphi                              52        100.00%                       36.39%                                    
+       get_h2phi_h_occ                               2      100.00%                       0.13%                                       
+       get_h2phi_x_occ_chol                          1      100.00%                       0.21%                                       
+       local_energy_gres_sd                          2      2.06%                         3.66%                                       
+         biorth_orb                                  2        9.27%                         51.60%                                    
+           ovlp_matrix                               4          100.00%                       12.52%                                  
+           inverse_ovlp                              4          100.00%                       51.25%                                  
+           gemm_biorth                               4          100.00%                       26.97%                                  
+         h1_mean_no                                  2        100.00%                       2.60%                                     
+         lgmean_no                                   4        49.80%                        19.01%                                    
+           gemm_lgmean                               8          100.00%                       50.20%                                  
+         exchange_energy_no_chol                     2        14.57%                        24.74%                                    
+           gemm_en                                   4          100.00%                       71.24%                                  
+           alpha_g_ij                                4          100.00%                       14.19%                                  
+       get_h2_gres_ob                                2      100.00%                       0.02%                                       
+     afqmc_walker_factory_coeff                      1    69.38%                        0.01%                                         
+       get_overlap_sd                                1      3.58%                         8.05%                                       
+         get_overlap                                 1        54.33%                        96.42%                                    
+           ovlp_matrix                               2          100.00%                       45.67%                                  
+       local_energy_gres_sd                          1      3.90%                         22.56%                                      
+         biorth_orb                                  1        15.66%                        21.31%                                    
+           ovlp_matrix                               2          100.00%                       18.92%                                  
+           inverse_ovlp                              2          100.00%                       35.42%                                  
+           gemm_biorth                               2          100.00%                       30.01%                                  
+         h1_mean_no                                  1        100.00%                       6.12%                                     
+         lgmean_no                                   2        40.74%                        32.29%                                    
+           gemm_lgmean                               4          100.00%                       59.26%                                  
+         exchange_energy_no_chol                     1        14.34%                        36.39%                                    
+           gemm_en                                   2          100.00%                       68.55%                                  
+           alpha_g_ij                                2          100.00%                       17.11%                                  
+     update_afqmc_energy                           751    100.00%                       7.08%                                         
+     local_energy_gres_sd                            4    3.57%                         0.01%                                         
+       biorth_orb                                    4      18.56%                        25.28%                                      
+         ovlp_matrix                                 8        100.00%                       36.55%                                    
+         inverse_ovlp                                8        100.00%                       26.03%                                    
+         gemm_biorth                                 8        100.00%                       18.86%                                    
+       h1_mean_no                                    4      100.00%                       4.61%                                       
+       lgmean_no                                     8      37.82%                        28.03%                                      
+         gemm_lgmean                                16        100.00%                       62.18%                                    
+       exchange_energy_no_chol                       4      18.61%                        38.51%                                      
+         gemm_en                                     8        100.00%                       59.41%                                    
+         alpha_g_ij                                  8        100.00%                       21.98%                                    
+     afqmc_mean_el                                  14    100.00%                       0.01%                                         
+     afqmc_mean_el_sd                               12    26.12%                        0.00%                                         
+       afqmc_mean_el                                12      100.00%                       73.88%                                      
+     afqmc_mean_el_sdm                              12    100.00%                       0.01%                                         
+     propagate_walkers                             500    42.61%                        38.11%                                        
+       setup_auxiliary_field                       500      81.78%                        18.85%                                      
+         setup_aux_pot                             500        2.13%                         18.22%                                    
+           gemm_fields                             500          100.00%                       97.87%                                  
+       gemm_expm                                600000      100.00%                       38.54%                                      
+     calculate_observables                         500    2.15%                         28.73%                                        
+       batch_walkers                               500      100.00%                       1.30%                                       
+       get_overlap_sd                              500      0.50%                         11.65%                                      
+         get_overlap                               500        54.12%                        99.50%                                    
+           ovlp_matrix                            1000          100.00%                       45.88%                                  
+       h2_gres_mean_sd                             250      0.67%                         26.65%                                      
+         biorth_orb                                250        18.42%                        85.81%                                    
+           ovlp_matrix                           50000          100.00%                       33.10%                                  
+           inverse_ovlp                          50000          100.00%                       28.13%                                  
+           gemm_biorth                           50000          100.00%                       20.35%                                  
+         lgmean_no                                 250        18.75%                        13.52%                                    
+           gemm_lgmean                             500          100.00%                       81.25%                                  
+       unbatch_walkers                             500      100.00%                       1.14%                                       
+       local_energy_sd                             250      0.82%                         57.11%                                      
+         biorth_orb                                250        18.48%                        39.85%                                    
+           ovlp_matrix                           50000          100.00%                       33.17%                                  
+           inverse_ovlp                          50000          100.00%                       28.03%                                  
+           gemm_biorth                           50000          100.00%                       20.31%                                  
+         h1_mean_no                                250        100.00%                       1.47%                                     
+         lgmean_no                                 500        14.49%                        11.25%                                    
+           gemm_lgmean                            1000          100.00%                       85.51%                                  
+         exchange_energy_no_chol                   250        2.75%                         46.60%                                    
+           gemm_en                               10000          100.00%                       58.32%                                  
+           alpha_g_ij                            10000          100.00%                       38.94%                                  
+     accept_reject_walkers                         500    100.00%                       0.06%                                         
+     detect_rare_events                            500    100.00%                       0.25%                                         
+     update_walker_weights                         500    100.00%                       0.04%                                         
+     reorthogonalize_walkers                       500    68.28%                        10.04%                                        
+       ovlp_matrix                              100000      100.00%                       31.72%                                      
+     rebalance_walkers                             250    100.00%                       2.90%                                         
+     write_afqmc_chkpt                               4    100.00%                       6.19%                                         
+     afqmc_mean_el_sdm_tnw                           1    100.00%                       0.00%                                         
+     afqmc_mean_el_sdm_nw                            1    100.00%                       0.00%                                         
+ ***************************************************************************
+ 
+ 
+      Time Profiling - flat - elapsed time:
+ ************************************************************
+   cnt          routine name               ncalls        self time     % self    acc time       % acc     atime/call   
+   ===          ============               ======        =========     ======    ========       =====     ==========   
+     1   propagate_walkers                    500     0.525301s       16.18%     1.23s         37.97%   0.002465s                                         
+     2   gemm_expm                         600000     0.475032s       14.63%   0.475032s       14.63%   0.000001s                                         
+     3   ovlp_matrix                       201016     0.292917s        9.02%   0.292917s        9.02%   0.000001s                                         
+     4   update_afqmc_energy                  751     0.228870s        7.05%   0.228870s        7.05%   0.000305s                                         
+     5   reorthogonalize_walkers              500     0.221725s        6.83%   0.324715s       10.00%   0.000649s                                         
+     6   do_afqmc                               1     0.203000s        6.25%     3.23s         99.61%     3.23s                                           
+     7   write_afqmc_chkpt                      4     0.200288s        6.17%   0.200288s        6.17%   0.050072s                                         
+     8   setup_auxiliary_field                500     0.190001s        5.85%   0.232346s        7.16%   0.000465s                                         
+     9   gemm_en                            10014     0.144328s        4.45%   0.144328s        4.45%   0.000014s                                         
+    10   inverse_ovlp                      100014     0.119134s        3.67%   0.119134s        3.67%   0.000001s                                         
+    11   alpha_g_ij                         10014     0.096309s        2.97%   0.096309s        2.97%   0.000010s                                         
+    12   rebalance_walkers                    250     0.093920s        2.89%   0.093920s        2.89%   0.000376s                                         
+    13   gemm_biorth                       100014     0.086250s        2.66%   0.086250s        2.66%   0.000001s                                         
+    14   gemm_lgmean                         1528     0.078341s        2.41%   0.078341s        2.41%   0.000051s                                         
+    15   biorth_orb                           507     0.078230s        2.41%   0.424127s       13.06%   0.000837s                                         
+    16   get_overlap                          501     0.058286s        1.80%   0.107700s        3.32%   0.000215s                                         
+    17   gemm_fields                          500     0.041444s        1.28%   0.041444s        1.28%   0.000083s                                         
+    18   calculate_observables                500     0.019961s        0.61%   0.929058s       28.62%   0.001858s                                         
+    19   lgmean_no                            764     0.014990s        0.46%   0.093330s        2.87%   0.000122s                                         
+    20   batch_walkers                        500     0.012100s        0.37%   0.012100s        0.37%   0.000024s                                         
+    21   unbatch_walkers                      500     0.010623s        0.33%   0.010623s        0.33%   0.000021s                                         
+    22   setup_afqmc_hamiltonian                1     0.008290s        0.26%   0.008803s        0.27%   0.008803s                                         
+    23   detect_rare_events                   500     0.008179s        0.25%   0.008179s        0.25%   0.000016s                                         
+    24   h1_mean_no                           257     0.007845s        0.24%   0.007845s        0.24%   0.000031s                                         
+    25   read_files                             1     0.007674s        0.24%   0.007696s        0.24%   0.007696s                                         
+    26   exchange_energy_no_chol              257     0.006820s        0.21%   0.247456s        7.62%   0.000963s                                         
+    27   QMCFORT                                1     0.004880s        0.15%     3.25s        100.00%     3.25s                                           
+    28   local_energy_sd                      250     0.004352s        0.13%   0.530560s       16.34%   0.002122s                                         
+    29   accept_reject_walkers                500     0.001885s        0.06%   0.001885s        0.06%   0.000004s                                         
+    30   h2_gres_mean_sd                      250     0.001653s        0.05%   0.247607s        7.63%   0.000990s                                         
+    31   update_walker_weights                500     0.001334s        0.04%   0.001334s        0.04%   0.000003s                                         
+    32   setup_aux_pot                        500     0.000901s        0.03%   0.042345s        1.30%   0.000085s                                         
+    33   get_overlap_sd                       501     0.000540s        0.02%   0.108240s        3.33%   0.000216s                                         
+    34   afqmc_mean_el_sdm                     12     0.000375s        0.01%   0.000375s        0.01%   0.000031s                                         
+    35   afqmc_mean_el                         26     0.000304s        0.01%   0.000304s        0.01%   0.000012s                                         
+    36   afqmc_walker_factory_coeff             1     0.000275s        0.01%   0.000397s        0.01%   0.000397s                                         
+    37   afqmc_mean_el_sdm_tnw                  1     0.000040s        0.00%   0.000040s        0.00%   0.000040s                                         
+    38   gemm_hselfphi                         52     0.000039s        0.00%   0.000039s        0.00%   0.000001s                                         
+    39   gemm_hself                            52     0.000036s        0.00%   0.000036s        0.00%   0.000001s                                         
+    40   afqmc_mean_el_sd                      12     0.000034s        0.00%   0.000128s        0.00%   0.000011s                                         
+    41   gemm_h2phi                            52     0.000032s        0.00%   0.000032s        0.00%   0.000001s                                         
+    42   get_hselfphi                           1     0.000032s        0.00%   0.000107s        0.00%   0.000107s                                         
+    43   afqmc_mean_el_sdm_nw                   1     0.000031s        0.00%   0.000031s        0.00%   0.000031s                                         
+    44   get_h2_gres_2d                         1     0.000022s        0.00%   0.000022s        0.00%   0.000022s                                         
+    45   get_h2phi_x_occ_chol                   1     0.000019s        0.00%   0.000019s        0.00%   0.000019s                                         
+    46   local_energy_gres_sd                   7     0.000017s        0.00%   0.000613s        0.02%   0.000088s                                         
+    47   get_h2phi                              1     0.000014s        0.00%   0.000046s        0.00%   0.000046s                                         
+    48   get_h2phi_h_occ                        2     0.000012s        0.00%   0.000012s        0.00%   0.000006s                                         
+    49   get_h1phi_occ                          2     0.000006s        0.00%   0.000006s        0.00%   0.000003s                                         
+    50   get_h2_gres_ob                         2     0.000001s        0.00%   0.000001s        0.00%   0.000001s                                         
+    51   write_ham_files                        1     0.000001s        0.00%   0.000001s        0.00%   0.000001s                                         
+ ***************************************************************************
+ 
+ 
+      Time Profiling - FLOPS report  
+ ************************************************************
+   cnt     routine name                    ncalls      acc time       atime/call       FLOPS/core  
+   ===     ============                    ======      ========       ==========       ==========  
+     1   gemm_expm                         600000     0.475032s      0.000001s         2.5GFLOPS                                      
+     2   ovlp_matrix                       201016     0.292917s      0.000001s       955.9MFLOPS                                      
+     3   gemm_en                            10014     0.144328s      0.000014s         6.3GFLOPS                                      
+     4   alpha_g_ij                         10014     0.096309s      0.000010s         2.7GFLOPS                                      
+     5   gemm_biorth                       100014     0.086250s      0.000001s         1.6GFLOPS                                      
+     6   gemm_lgmean                         1528     0.078341s      0.000051s         7.0GFLOPS                                      
+     7   gemm_fields                          500     0.041444s      0.000083s         6.1GFLOPS                                      
+     8   gemm_hselfphi                         52     0.000039s      0.000001s       654.4MFLOPS                                      
+     9   gemm_hself                            52     0.000036s      0.000001s       980.0MFLOPS                                      
+    10   gemm_h2phi                            52     0.000032s      0.000001s       784.9MFLOPS                                      
+ 
+    average FLOPS/core                                                                 2.9GFLOPS
+ ***************************************************************************
+ 
+                   ==================================================
+ 
+                        Total elapsed time         =    3.25s                                                     
+                        Total cpu time             =    3.21s                                                     
+                        Ratio cpu / elapsed time   =      0.99
+ 
+                        Time for measuring timers  =  0.277679s                                                   
+                        Time for writing timings   =  0.001587s                                                   
+                   ==================================================
+ 
+ ***************************************************************************

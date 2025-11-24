@@ -1,0 +1,76 @@
+ 
+ 
+      Time Profiling - graph - elapsed time:
+ ************************************************************
+        routine Name                            ncalls  self time                     acc time                   
+        ============                            ======  =========                     ========                   
+   read_files                                        1  0.032645s                     0.045784s                                       
+     iterative_cholesky                              1    0.013140s                     0.013140s                                     
+   do_hartree_fock                                   1  0.013472s                     0.014062s                                       
+     calculate_rdm                                   3    0.000182s                     0.000182s                                     
+     get_h2_gres_ob                                  6    0.000003s                     0.000003s                                     
+     calculate_gse                                   3    0.000019s                     0.000019s                                     
+     transform_fock_matrix                           2    0.000028s                     0.000028s                                     
+     diagonalize_fock_matrix                         2    0.000295s                     0.000295s                                     
+     transform_orbitals                              2    0.000018s                     0.000018s                                     
+     check_scf_convergence                           2    0.000044s                     0.000044s                                     
+   write_ham_files                                   1  0.005620s                     0.005620s                                       
+ ***************************************************************************
+ 
+ 
+      Time Profiling - graph - percentage :
+ ************************************************************
+        routine Name                            ncalls  self time %                   acc time %                  
+        ============                            ======  ===========                   ==========                  
+   read_files                                        1  71.30%                        67.80%                                          
+     iterative_cholesky                              1    100.00%                       28.70%                                        
+   do_hartree_fock                                   1  95.81%                        20.82%                                          
+     calculate_rdm                                   3    100.00%                       1.30%                                         
+     get_h2_gres_ob                                  6    100.00%                       0.02%                                         
+     calculate_gse                                   3    100.00%                       0.13%                                         
+     transform_fock_matrix                           2    100.00%                       0.20%                                         
+     diagonalize_fock_matrix                         2    100.00%                       2.10%                                         
+     transform_orbitals                              2    100.00%                       0.13%                                         
+     check_scf_convergence                           2    100.00%                       0.32%                                         
+   write_ham_files                                   1  100.00%                       8.32%                                           
+ ***************************************************************************
+ 
+ 
+      Time Profiling - flat - elapsed time:
+ ************************************************************
+   cnt          routine name               ncalls        self time     % self    acc time       % acc     atime/call   
+   ===          ============               ======        =========     ======    ========       =====     ==========   
+     1   read_files                             1     0.032645s       48.34%   0.045784s       67.80%   0.045784s                                         
+     2   do_hartree_fock                        1     0.013472s       19.95%   0.014062s       20.82%   0.014062s                                         
+     3   iterative_cholesky                     1     0.013140s       19.46%   0.013140s       19.46%   0.013140s                                         
+     4   write_ham_files                        1     0.005620s        8.32%   0.005620s        8.32%   0.005620s                                         
+     5   QMCFORT                                1     0.002067s        3.06%   0.067533s      100.00%   0.067533s                                         
+     6   diagonalize_fock_matrix                2     0.000295s        0.44%   0.000295s        0.44%   0.000148s                                         
+     7   calculate_rdm                          3     0.000182s        0.27%   0.000182s        0.27%   0.000061s                                         
+     8   check_scf_convergence                  2     0.000044s        0.07%   0.000044s        0.07%   0.000022s                                         
+     9   transform_fock_matrix                  2     0.000028s        0.04%   0.000028s        0.04%   0.000014s                                         
+    10   calculate_gse                          3     0.000019s        0.03%   0.000019s        0.03%   0.000006s                                         
+    11   transform_orbitals                     2     0.000018s        0.03%   0.000018s        0.03%   0.000009s                                         
+    12   get_h2_gres_ob                         6     0.000003s        0.00%   0.000003s        0.00%   0.000000s                                         
+ ***************************************************************************
+ 
+ 
+      Time Profiling - FLOPS report  
+ ************************************************************
+   cnt     routine name                    ncalls      acc time       atime/call       FLOPS/core  
+   ===     ============                    ======      ========       ==========       ==========  
+ 
+    average FLOPS/core                                                              
+ ***************************************************************************
+ 
+                   ==================================================
+ 
+                        Total elapsed time         =  0.067533s                                                   
+                        Total cpu time             =  0.268867s                                                   
+                        Ratio cpu / elapsed time   =      3.98
+ 
+                        Time for measuring timers  =  0.000027s                                                   
+                        Time for writing timings   =  0.000278s                                                   
+                   ==================================================
+ 
+ ***************************************************************************

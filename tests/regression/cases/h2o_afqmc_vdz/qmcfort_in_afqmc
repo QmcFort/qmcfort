@@ -1,0 +1,28 @@
+write_files = 0
+
+ispin = 1 
+spin = 0
+
+brng = lcg48
+
+afqmc = .true.
+  projection = phaseless
+  hybrid = 1.0
+  afqmc_mix = 1.0
+
+  subtract_mean_field = .true.
+  importance_sampling_shift = mix
+  importance_sampling_scale = none
+
+  nwalkers = 400
+  tau = 0.1
+  nblocks = 18
+  eqblocks = 2
+  steps_per_block = 20
+  sample = 2
+  samplex = 2
+  reorth = 1
+  
+  pop = 4
+  
+  exchange_mode = eri

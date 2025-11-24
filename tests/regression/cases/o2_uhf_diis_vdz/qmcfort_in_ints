@@ -1,0 +1,14 @@
+write_files = 2
+file_format = numpy
+integral_mode = eri
+basis = mo
+
+hfock = .true.
+use_diis = .true. 
+rdm_tol = 1.0e-04
+hf_tol = 1.0e-08
+uhf_mix = 0.0
+rdm_mix = 1.0
+
+ispin = 2
+spin = 2

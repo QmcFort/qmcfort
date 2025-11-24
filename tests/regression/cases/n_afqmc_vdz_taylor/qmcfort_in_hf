@@ -1,0 +1,13 @@
+write_files = 2
+file_format = numpy
+basis = ao_orth
+integral_mode = cholesky
+chol_tol = 1.0e-06
+
+hfock = .true.
+use_diis = .true.
+rdm_tol = 1.0e-08
+hf_tol = 1.0e-10
+
+ispin = 2
+spin = 3

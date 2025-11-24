@@ -1,0 +1,6 @@
+write_files = 0
+
+mp2 = .true.
+
+ispin = 1
+spin = 0

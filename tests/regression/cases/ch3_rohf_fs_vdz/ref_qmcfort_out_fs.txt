@@ -1,0 +1,202 @@
+ ***************************************************************************
+ ***                                                                     ***
+ ***                            Q m c F o r t                            ***
+ ***                   Quantum Monte Carlo with Fortran                  ***
+ ***                                                                     ***
+ ***   started at: Nov 15 2025  20:44:43                                 ***
+ ***   built at  : Nov 15 2025  20:17:39                                 ***
+ ***   version   : 07ab228                                               ***
+ ***                                                                     ***
+ ***************************************************************************
+ MPI Communicator information:
+ -----------------------------
+   Number of MPI processes      =      1
+ 
+   OpenMP allowed?              =    T
+   Allowed no. of OpenMP levels =      2
+   Number of OpenMP threads     =      4
+   Number of BLAS threads       =      1
+ 
+   Total number of comp. units  =      4
+ ***************************************************************************
+ 
+ Molecular Geometry:
+ -------------------
+   number of atoms                               =    4
+   number of atomic species                      =    2
+   atomic species                                =  C H
+   coordinate units                              = A
+   coordinates:
+       atom        x         y         z       Zeff   
+       ====        =         =         =       ====   
+        C       0.000000  0.000000  0.018229  6.000000
+        H       0.000000  1.078740 -0.036457  1.000000
+        H      -0.934216 -0.539370 -0.036457  1.000000
+        H       0.934216 -0.539370 -0.036457  1.000000
+ 
+ Basic Random Number Generator:
+ ------------------------------
+   brng       = LCG48
+   brng_seed  = 167901165
+ 
+ Information about system:
+    Number of basis functions     n          =            28
+    Number of electrons           nelect     =             7
+    Number of up electrons        nelect_a   =             4
+    Number of beta electrons      nelect_b   =             3
+    Number of occupied states     nocc       =             4
+    Sz spin component             spin       =             1
+    Spin dimension                ispin      =             1
+    Spin dimension 1              ispin1     =             1
+    Spin dimension 2              ispin2     =             1
+    Spin dimension FOCK           ispin_fock =             2
+    Spin multiplicity             rspin      =             1
+ ***************************************************************************
+ SCF CALCULATION
+ ************************************************************
+ HF_descriptor:
+    maximal number of steps      maxstep       =  50
+    convergence criterion energy en_tol        =   1.000000E-08
+    convergence criterion rdm    rdm_tol       =   1.000000E-06
+    mixing parameter for rdm     rdm_mix       =   0.800000
+    mixing parameter for uhf     uhf_mix       =   0.100000
+    scf initial guess            init_guess    = none                                                        
+ entering scf loop:
+ ************************************************************
+ step number                    0
+ rdm norm                       0.000000E+00
+ energy and energy difference   -39.55964468 -1.039560E+03
+ 
+ 
+ energy of the electronic-ionic system:
+ ---------------------------------------------------------
+
+ contribution                     Re E      
+ ------------                     ----      
+ enuc =                          9.66825908
+ e0   =                        -35.29821970
+ e1   =                        -23.41136472
+ eh   =                         12.05682641
+ ex   =                         -2.57514575
+ e    =                        -49.22790376
+ etot =                        -39.55964468
+ 
+ eigenvalues spin component:   1
+         No.  eigenval       occ
+           1     -1.756055   2.000000
+           2     -1.127811   2.000000
+           3     -1.127778   2.000000
+           4     -0.209413   1.000000
+           5      0.397020   0.000000
+           6      0.540519   0.000000
+           7      0.540542   0.000000
+ ************************************************************
+ step number                    1
+ rdm norm                       2.605551E+00
+ energy and energy difference   -39.55964468  2.341729E-09
+ 
+ 
+ energy of the electronic-ionic system:
+ ---------------------------------------------------------
+
+ contribution                     Re E      
+ ------------                     ----      
+ enuc =                          9.66825908
+ e0   =                        -35.29821970
+ e1   =                        -23.41135859
+ eh   =                         12.05682023
+ ex   =                         -2.57514570
+ e    =                        -49.22790376
+ etot =                        -39.55964468
+ 
+ eigenvalues spin component:   1
+         No.  eigenval       occ
+           1     -1.756055   2.000000
+           2     -1.127807   2.000000
+           3     -1.127784   2.000000
+           4     -0.209415   1.000000
+           5      0.397019   0.000000
+           6      0.540523   0.000000
+           7      0.540538   0.000000
+ ************************************************************
+ step number                    2
+ rdm norm                       1.591793E-11
+ energy and energy difference   -39.55964468  1.519247E-09
+ 
+ 
+ energy of the electronic-ionic system:
+ ---------------------------------------------------------
+
+ contribution                     Re E      
+ ------------                     ----      
+ enuc =                          9.66825908
+ e0   =                        -35.29821970
+ e1   =                        -23.41135595
+ eh   =                         12.05681811
+ ex   =                         -2.57514623
+ e    =                        -49.22790376
+ etot =                        -39.55964468
+ 
+ eigenvalues spin component:   1
+         No.  eigenval       occ
+           1     -1.756056   2.000000
+           2     -1.127805   2.000000
+           3     -1.127788   2.000000
+           4     -0.209417   1.000000
+           5      0.397019   0.000000
+           6      0.540525   0.000000
+           7      0.540536   0.000000
+ ************************************************************
+ Eigenvalue of <S^{2}> operator  =   0.7500
+ Spin multiplicity 2S + 1 =   2.0000
+ hf_summary:       2             T            -39.55964468   1.519247E-09   1.591793E-11
+ 
+ 
+ hf_energy of the electronic-ionic system:
+ ---------------------------------------------------------
+
+ contribution                     Re E      
+ ------------                     ----      
+ hf_enuc =                       9.66825908
+ hf_e0   =                     -35.29821970
+ hf_e1   =                     -23.41135595
+ hf_eh   =                      12.05681811
+ hf_ex   =                      -2.57514623
+ hf_e    =                     -49.22790376
+ hf_etot =                     -39.55964468
+ 
+ eigenvalues spin component:   1
+         No.  eigenval       occ
+           1     -1.756056   2.000000
+           2     -1.127805   2.000000
+           3     -1.127788   2.000000
+           4     -0.209417   1.000000
+           5      0.397019   0.000000
+           6      0.540525   0.000000
+           7      0.540536   0.000000
+           8      1.227277   0.000000
+           9      1.227278   0.000000
+          10      1.393902   0.000000
+          11      1.427546   0.000000
+          12      1.802296   0.000000
+          13      1.802307   0.000000
+          14      2.129617   0.000000
+          15      2.402985   0.000000
+          16      2.402988   0.000000
+          17      3.244983   0.000000
+          18      3.452434   0.000000
+          19      3.452435   0.000000
+          20      3.522517   0.000000
+          21      3.778852   0.000000
+          22      4.248303   0.000000
+          23      4.248309   0.000000
+          24      4.805710   0.000000
+          25      4.805712   0.000000
+          26      5.595980   0.000000
+          27      5.726802   0.000000
+          28      5.726805   0.000000
+ ***************************************************************************
+ 
+      finished at: Nov 15 2025  20:44:43
+ 
+ ***************************************************************************

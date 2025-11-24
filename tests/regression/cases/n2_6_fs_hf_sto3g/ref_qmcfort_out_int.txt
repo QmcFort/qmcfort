@@ -1,0 +1,91 @@
+ ***************************************************************************
+ ***                                                                     ***
+ ***                            Q m c F o r t                            ***
+ ***                   Quantum Monte Carlo with Fortran                  ***
+ ***                                                                     ***
+ ***   started at: Nov 15 2025  20:45:55                                 ***
+ ***   built at  : Nov 15 2025  20:17:39                                 ***
+ ***   version   : 07ab228                                               ***
+ ***                                                                     ***
+ ***************************************************************************
+ MPI Communicator information:
+ -----------------------------
+   Number of MPI processes      =      1
+ 
+   OpenMP allowed?              =    T
+   Allowed no. of OpenMP levels =      2
+   Number of OpenMP threads     =      4
+   Number of BLAS threads       =      1
+ 
+   Total number of comp. units  =      4
+ ***************************************************************************
+ 
+ Molecular Geometry:
+ -------------------
+   number of atoms                               =   12
+   number of atomic species                      =    1
+   atomic species                                =  N
+   coordinate units                              = A
+   coordinates:
+       atom        x         y         z       Zeff   
+       ====        =         =         =       ====   
+        N       0.000000  0.000000  0.000000  7.000000
+        N       0.000000  0.000000  1.300000  7.000000
+        N       0.000000  0.000000 11.300000  7.000000
+        N       0.000000  0.000000 12.600000  7.000000
+        N       0.000000  0.000000 22.600000  7.000000
+        N       0.000000  0.000000 23.900000  7.000000
+        N       0.000000  0.000000 33.900000  7.000000
+        N       0.000000  0.000000 35.200000  7.000000
+        N       0.000000  0.000000 45.200000  7.000000
+        N       0.000000  0.000000 46.500000  7.000000
+        N       0.000000  0.000000 56.500000  7.000000
+        N       0.000000  0.000000 57.800000  7.000000
+ 
+ Basic Random Number Generator:
+ ------------------------------
+   brng       = LCG48
+   brng_seed  = 167901165
+ 
+ GAUSSIAN INTEGRALS CALCULATION
+ ************************************************************
+ 
+ Cholesky compresion
+ 
+ current number of the Cholesky vectors             =        0
+ maximal number of the Cholesky vectors             =     3600
+ estimated number of the Cholesky vectors           =      480
+ Cholesky threshold                                 =   1.000000E-06
+ 
+     # Chol. vectors   residual value     # sh pairs     # acc. int  # calc. int  # scr. int 
+     ---------------   --------------     ----------     ----------  -----------  ---------- 
+           25           7.628045E-01         1.31%          1.06%       1.58%       83.33%                                                     
+           50           5.160979E-01         1.70%          2.00%       2.83%       83.33%                                                     
+          100           1.498195E-01         2.78%          2.81%       4.22%       83.36%                                                     
+          125           3.343741E-02         3.94%          3.61%       5.64%       83.39%                                                     
+          150           1.404037E-02         5.25%          4.33%       7.06%       83.67%                                                     
+          175           1.282162E-03         7.72%          5.11%       8.56%       83.72%                                                     
+          200           9.556498E-04         8.18%          5.83%      10.06%       83.89%                                                     
+          225           6.876847E-05         9.26%          6.50%      11.44%       84.50%                                                     
+          250           1.287008E-05        11.11%          7.36%      12.89%       84.50%                                                     
+ 
+ number of cholesky vecotrs found   =    265
+ residual value                     =   5.011066E-07
+ ***************************************************************************
+ Information about system:
+    Number of basis functions     n          =            60
+    Number of electrons           nelect     =            84
+    Number of up electrons        nelect_a   =            42
+    Number of beta electrons      nelect_b   =            42
+    Number of occupied states     nocc       =            42
+    Sz spin component             spin       =             0
+    Spin dimension                ispin      =             1
+    Spin dimension 1              ispin1     =             1
+    Spin dimension 2              ispin2     =             1
+    Spin dimension FOCK           ispin_fock =             1
+    Spin multiplicity             rspin      =             2
+ ***************************************************************************
+ 
+      finished at: Nov 15 2025  20:46:04
+ 
+ ***************************************************************************

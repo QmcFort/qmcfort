@@ -1,0 +1,7 @@
+# qmcfort_in_cholesky
+
+write_files = 2
+
+integral_mode = cholesky
+compress_h2 = .true.
+chol_tol = 1.0E-05

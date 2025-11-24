@@ -1,0 +1,10 @@
+basis         = mean_field
+integral_mode = cholesky
+file_format   = numpy
+n             =     13
+nbtot         =     13
+ispin         =      2
+ispin1        =      2
+ispin2        =      3
+ng            =     73
+nel           =      3     1

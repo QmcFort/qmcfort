@@ -1,0 +1,35 @@
+write_files = 0
+
+ispin = 1
+spin = 0
+
+brng = lcg48
+
+afqmc = .true.
+  projection = free
+  hybrid = 1.0
+  afqmc_mix = 1.0
+
+  subtract_mean_field = .true.
+  importance_sampling_shift = mix
+  importance_sampling_scale = none
+
+  nwalkers = 300
+  tau = 0.05
+  nblocks = 20
+  eqblocks = 10
+  steps_per_block = 20
+  reorth = 1
+  sample = 1
+  samplex = 1
+
+  growth_est_active = .true.
+  growth_est_period = 1
+  growth_est_damp = 0.2
+
+  prop = s2
+  expm = krylov
+  expm_order = 6
+
+  pop = 5
+

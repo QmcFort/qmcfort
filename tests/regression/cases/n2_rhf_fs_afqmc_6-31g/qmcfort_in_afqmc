@@ -1,0 +1,29 @@
+write_files = 0
+
+ispin = 1 
+spin = 0
+
+brng = lcg48
+
+afqmc = .true.
+  projection = phaseless
+  hybrid = 1.0
+  afqmc_mix = 1.0
+
+  subtract_mean_field = .true.
+  importance_sampling_shift = mix
+  importance_sampling_scale = none
+
+  nwalkers = 400
+  tau = 0.10
+  nblocks = 20
+  eqblocks = 5
+  steps_per_block = 20
+  reorth = 1
+  
+  pop = 2
+
+  growth_est_active = .true.
+  growth_est_period = 10
+
+  exchange_mode = cholesky

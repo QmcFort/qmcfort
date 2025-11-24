@@ -1,0 +1,24 @@
+write_files = 0
+
+ispin = 2
+spin = 0
+
+brng = lcg48
+
+afqmc = .true.
+  hybrid = 1.0
+  afqmc_mix = 1.0
+
+  subtract_mean_field = .true.
+  importance_sampling_shift = mix
+  importance_sampling_scale = none
+
+  nwalkers = 400
+  tau = 0.1
+  nblocks = 8
+  eqblocks = 2
+  steps_per_block = 50
+  reorth = 1
+  sample = 2
+  
+  pop = 2

@@ -1,0 +1,7 @@
+integral_mode = cholesky
+
+file_format = numpy
+write_files = 2
+
+ispin = 1
+spin = 0

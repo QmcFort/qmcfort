@@ -1,0 +1,11 @@
+integral_mode = cholesky
+chol_tol = 1.0e-05
+
+hfock = .true.
+use_diis = .true.
+init_guess = diag
+rdm_tol = 1.0e-04
+hf_tol = 1.0e-08
+
+ispin = 1
+spin = 1

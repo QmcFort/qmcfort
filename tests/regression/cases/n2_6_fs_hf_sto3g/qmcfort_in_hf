@@ -1,0 +1,18 @@
+integral_mode = cholesky
+basis = mo
+
+hfock = .true.
+use_diis = .true.
+scf_init_guess = random
+hf_maxiter = 300
+hf_eps = 1.0e-10
+rdm_eps = 1.0e-08
+
+ispin = 1
+spin = 0
+
+frozen_core = .true.
+nfrozen = 12
+
+file_format = numpy
+write_files = 2

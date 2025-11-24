@@ -1,0 +1,44 @@
+# qmcfort_in_noci
+
+write_files = 0
+
+brng = lcg48
+brng_seed = 177602913603057
+
+ispin = 1
+spin = 0
+
+noci_afqmc = .true.
+  ndet_max = 2000
+  nepochs = 10
+  steps_per_epoch = 100
+  ovlp_thresh = 0.6
+  energy_thresh_max = 0.0005
+  energy_thresh_min = 0.00001
+  sigma_eloc = 4.0
+  update_afqmc_trial = .true.
+
+  #afqmc
+    projection = phaseless
+    hybrid = 1.0
+    afqmc_mix = 1.0
+
+    subtract_mean_field = .true.
+    importance_sampling_shift = mix
+    
+    nwalkers = 3200
+    tau = 0.01
+    nblocks = 1
+    eqblocks = 1
+    steps_per_block = 1
+    sample = 1
+    samplex = 1
+    reorth = 1
+    pop = 10
+
+    prop = s2
+
+    exchange_mode = cholesky
+
+    p_capping = .true.
+    shift_cut = none

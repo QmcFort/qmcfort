@@ -1,0 +1,6 @@
+# qmcfort_in_mp2
+
+write_files = 0
+mp2 = .true.
+
+

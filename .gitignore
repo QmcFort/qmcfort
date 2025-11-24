@@ -1,0 +1,36 @@
+build*/
+bin/
+tests/regression/results/
+
+#QmcFort rt specifics
+report.log
+timestamp
+
+#all compiler things
+.o
+.mod
+.exe
+
+#VS Code related stuff
+.vscode
+
+#Python related stuff
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+.venv*
+.Python
+dist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+.installed.cfg
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+.installed.cfg
+lib/
+lib64/

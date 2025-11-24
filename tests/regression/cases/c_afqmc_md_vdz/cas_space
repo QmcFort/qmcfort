@@ -1,0 +1,5 @@
+# of dets   # of active orbitals   # of active electrons
+    2                4               3     1
+   alpha string          beta string            ci_coeff
+[ 0 1 2 ]  [ 0 ]  -0.98877711338747
+[ 1 2 3 ]  [ 1 ]  0.14939819289724932

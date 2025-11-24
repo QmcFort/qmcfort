@@ -1,0 +1,10 @@
+basis         = ao_orth
+integral_mode = cholesky
+file_format   = numpy
+n             =     14
+nbtot         =     14
+ispin         =      2
+ispin1        =      1
+ispin2        =      1
+ng            =     76
+nel           =      5     2

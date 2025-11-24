@@ -1,0 +1,81 @@
+ ***************************************************************************
+ ***                                                                     ***
+ ***                            Q m c F o r t                            ***
+ ***                   Quantum Monte Carlo with Fortran                  ***
+ ***                                                                     ***
+ ***   started at: Nov 15 2025  20:44:50                                 ***
+ ***   built at  : Nov 15 2025  20:17:39                                 ***
+ ***   version   : 07ab228                                               ***
+ ***                                                                     ***
+ ***************************************************************************
+ MPI Communicator information:
+ -----------------------------
+   Number of MPI processes      =      1
+ 
+   OpenMP allowed?              =    T
+   Allowed no. of OpenMP levels =      2
+   Number of OpenMP threads     =      1
+   Number of BLAS threads       =      1
+ 
+   Total number of comp. units  =      1
+ ***************************************************************************
+ 
+ Molecular Geometry:
+ -------------------
+   number of atoms                               =    1
+   number of atomic species                      =    1
+   atomic species                                =  C
+   coordinate units                              = A
+   coordinates:
+       atom        x         y         z       Zeff   
+       ====        =         =         =       ====   
+        C       0.000000  0.000000  0.000000  6.000000
+ 
+ Basic Random Number Generator:
+ ------------------------------
+   brng       = LCG48
+   brng_seed  = 167901165
+ 
+ Information about system:
+    Number of basis functions     n          =            23
+    Number of electrons           nelect     =             6
+    Number of up electrons        nelect_a   =             4
+    Number of beta electrons      nelect_b   =             2
+    Number of occupied states     nocc       =             6
+    Sz spin component             spin       =             2
+    Spin dimension                ispin      =             2
+    Spin dimension 1              ispin1     =             1
+    Spin dimension 2              ispin2     =             1
+    Spin dimension FOCK           ispin_fock =             2
+    Spin multiplicity             rspin      =             1
+ ***************************************************************************
+ BASIS TRANSFORMATION
+ ************************************************************
+ basis trafo descriptor:
+    from basis                                   = ao
+    to basis                                     = mo
+    ortgonalization mode                         =        3
+ ***************************************************************************
+ MP2 CALCULATION
+ ************************************************************
+ Number of ocupied orbitals per spin =      4     2
+ Number of virtual orbitals per spin =     19    21
+ 
+ 
+ mp2_energy of the electronic-ionic system:
+ ---------------------------------------------------------
+
+ contribution                     Re E      
+ ------------                     ----      
+ mp2_enuc =                      0.00000000
+ mp2_e0   =                      0.00000000
+ mp2_e1   =                    -50.42598589
+ mp2_eh   =                     17.70384523
+ mp2_ex   =                     -5.02076004
+ mp2_e    =                    -37.74290069
+ mp2_etot =                    -37.74290069
+ ***************************************************************************
+ 
+      finished at: Nov 15 2025  20:44:50
+ 
+ ***************************************************************************

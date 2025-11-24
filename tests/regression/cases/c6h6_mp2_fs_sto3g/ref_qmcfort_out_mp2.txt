@@ -1,0 +1,85 @@
+ ***************************************************************************
+ ***                                                                     ***
+ ***                            Q m c F o r t                            ***
+ ***                   Quantum Monte Carlo with Fortran                  ***
+ ***                                                                     ***
+ ***   started at: Nov 15 2025  20:44:36                                 ***
+ ***   built at  : Nov 15 2025  20:17:39                                 ***
+ ***   version   : 07ab228                                               ***
+ ***                                                                     ***
+ ***************************************************************************
+ MPI Communicator information:
+ -----------------------------
+   Number of MPI processes      =      1
+ 
+   OpenMP allowed?              =    T
+   Allowed no. of OpenMP levels =      2
+   Number of OpenMP threads     =      1
+   Number of BLAS threads       =      1
+ 
+   Total number of comp. units  =      1
+ ***************************************************************************
+ 
+ Molecular Geometry:
+ -------------------
+   number of atoms                               =   12
+   number of atomic species                      =    2
+   atomic species                                =  C H
+   coordinate units                              = A
+   coordinates:
+       atom        x         y         z       Zeff   
+       ====        =         =         =       ====   
+        C       0.000000  1.416160  0.000000  6.000000
+        C       1.226431  0.708080  0.000000  6.000000
+        C       1.226431 -0.708080  0.000000  6.000000
+        C       0.000000 -1.416160  0.000000  6.000000
+        C      -1.226431 -0.708080  0.000000  6.000000
+        C      -1.226431  0.708080  0.000000  6.000000
+        H       0.000000  2.517108  0.000000  1.000000
+        H       2.179880  1.258554  0.000000  1.000000
+        H       2.179880 -1.258554  0.000000  1.000000
+        H       0.000000 -2.517108  0.000000  1.000000
+        H      -2.179880 -1.258554  0.000000  1.000000
+        H      -2.179880  1.258554  0.000000  1.000000
+ 
+ Basic Random Number Generator:
+ ------------------------------
+   brng       = LCG48
+   brng_seed  = 167901165
+ 
+ Information about system:
+    Number of basis functions     n          =            30
+    Number of electrons           nelect     =            30
+    Number of up electrons        nelect_a   =            15
+    Number of beta electrons      nelect_b   =            15
+    Number of occupied states     nocc       =            15
+    Sz spin component             spin       =             0
+    Spin dimension                ispin      =             1
+    Spin dimension 1              ispin1     =             1
+    Spin dimension 2              ispin2     =             1
+    Spin dimension FOCK           ispin_fock =             1
+    Spin multiplicity             rspin      =             2
+ ***************************************************************************
+ MP2 CALCULATION
+ ************************************************************
+ Number of ocupied orbitals per spin =     15    15
+ Number of virtual orbitals per spin =     15    15
+ 
+ 
+ mp2_energy of the electronic-ionic system:
+ ---------------------------------------------------------
+
+ contribution                     Re E      
+ ------------                     ----      
+ mp2_enuc =                    200.41757058
+ mp2_e0   =                   -290.73348638
+ mp2_e1   =                   -256.81638428
+ mp2_eh   =                    130.05846420
+ mp2_ex   =                    -11.16861143
+ mp2_e    =                   -428.66001789
+ mp2_etot =                   -228.24244731
+ ***************************************************************************
+ 
+      finished at: Nov 15 2025  20:44:36
+ 
+ ***************************************************************************

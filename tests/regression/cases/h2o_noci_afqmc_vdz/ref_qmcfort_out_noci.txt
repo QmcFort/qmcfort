@@ -1,0 +1,224 @@
+ ***************************************************************************
+ ***                                                                     ***
+ ***                            Q m c F o r t                            ***
+ ***                   Quantum Monte Carlo with Fortran                  ***
+ ***                                                                     ***
+ ***   started at: Nov 15 2025  20:45:46                                 ***
+ ***   built at  : Nov 15 2025  20:17:39                                 ***
+ ***   version   : 07ab228                                               ***
+ ***                                                                     ***
+ ***************************************************************************
+ MPI Communicator information:
+ -----------------------------
+   Number of MPI processes      =      4
+ 
+   OpenMP allowed?              =    T
+   Allowed no. of OpenMP levels =      2
+   Number of OpenMP threads     =      1
+   Number of BLAS threads       =      1
+ 
+   Total number of comp. units  =      4
+ ***************************************************************************
+ 
+ Molecular Geometry:
+ -------------------
+   number of atoms                               =    3
+   number of atomic species                      =    2
+   atomic species                                =  H O
+   coordinate units                              = A
+   coordinates:
+       atom        x         y         z       Zeff   
+       ====        =         =         =       ====   
+        H       0.000000 -0.754784  0.521393  1.000000
+        H       0.000000  0.754784  0.521393  1.000000
+        O       0.000000  0.000000 -0.065705  8.000000
+ 
+ Basic Random Number Generator:
+ ------------------------------
+   brng       = LCG48
+   brng_seed  = 167901165
+ 
+ Information about system:
+    Number of basis functions     n          =            24
+    Number of electrons           nelect     =            10
+    Number of up electrons        nelect_a   =             5
+    Number of beta electrons      nelect_b   =             5
+    Number of occupied states     nocc       =             5
+    Sz spin component             spin       =             0
+    Spin dimension                ispin      =             1
+    Spin dimension 1              ispin1     =             1
+    Spin dimension 2              ispin2     =             1
+    Spin dimension FOCK           ispin_fock =             1
+    Spin multiplicity             rspin      =             2
+ ***************************************************************************
+ BASIS TRANSFORMATION
+ ************************************************************
+ basis trafo descriptor:
+    from basis                                   = ao
+    to basis                                     = mo
+    ortgonalization mode                         =        3
+ ***************************************************************************
+ 
+ NOCI-AFQMC Setup
+ ************************************************************
+ NOCI selection descriptor:
+    number of epochs                             =        5
+    steps per epoch                              =        4
+    local energy preselection width              =     4.000000
+    energy threshold max                         =   4.0000E-04
+    energy threshold min                         =   1.0000E-04
+    overlap threshold                            =   1.0000E-01
+    maximal number of determinants               =      100
+ 
+ AFQMC descriptor:
+    timestep                                     =     0.050000
+    number of afqmc walkers                      =     2000
+    number of afqmc walkers per proc             =      500
+ 
+ Importance sampling setup:
+ --------------------------
+   subtract mean field                           =  T
+   importance sampling shift                     = mix                                                         
+   importance sampling scale                     = none                                                        
+   importance sampling cut shift                 = remove                                                      
+   importance sampling shift cutoff              =       1.0000
+ 
+ Afqmc Projection (AfqmcProj):
+ -----------------------------
+   projection                                    = phaseless                                                   
+   auto_hybrid                                   =  F
+   hybrid                                        =       1.0000
+   mix                                           =       1.0000
+   min_cos_hp                                    =      -0.5000
+   accept reject                                 =  F
+ 
+ Random fields / Auxiliary potential setup (AuxFieldGen):
+ --------------------------------------------------------
+   distribution of the random fields             = normal                                                      
+   number of fields for the propagation          =      170
+ 
+ AFQMC Propagator (AfqmcProp):
+ -----------------------------
+   propagator                                    = s2
+   expm                                          = krylov
+   expm_order                                    =      6
+ 
+ Trial wave function descriptor
+ -------------------------------
+    trial wave function type                     = WaveTrialSD
+    size of the object                           =    1.3MB                                                    
+    Exchange energy mode                         = cholesky                                                    
+    block size for Hartree terms                 =      500
+    block size for exchange terms                =        5
+ 
+ trial_energy of the electronic-ionic system:
+ ---------------------------------------------------------
+ contribution                     Re E            Im E    
+ ------------                     ----            ----    
+ trial_enuc =                    9.20490701
+ trial_e0   =                    0.00000000
+ trial_e1   =                 -123.16795009    0.00000000
+ trial_eh   =                   46.91399767    0.00000000
+ trial_ex   =                   -8.97779736    0.00000000
+ trial_e    =                  -85.23174977    0.00000000
+ trial_etot =                  -76.02684277    0.00000000
+ 
+ init_energy of the electronic-ionic system:
+ ---------------------------------------------------------
+ contribution                     Re E            Im E    
+ ------------                     ----            ----    
+ init_enuc =                     9.20490701
+ init_e0   =                     0.00000000
+ init_e1   =                  -123.16795009    0.00000000
+ init_eh   =                    46.91399767    0.00000000
+ init_ex   =                    -8.97779736    0.00000000
+ init_e    =                   -85.23174977    0.00000000
+ init_etot =                   -76.02684277    0.00000000
+ 
+ NOCI-AFQMC
+ ************************************************************
+   Epoch   1 :  energy_thresh =   4.00E-04,  ovlp_thresh =   1.00E-01
+     Step    1 :  tau =   0.0500,  Nw for selection =     17,  ratio =   0.0085
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+     Step    2 :  tau =   0.1000,  Nw for selection =     15,  ratio =   0.0075
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+     Step    3 :  tau =   0.1500,  Nw for selection =     19,  ratio =   0.0095
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+     Step    4 :  tau =   0.2000,  Nw for selection =     19,  ratio =   0.0095
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+   Epoch   2 :  energy_thresh =   2.83E-04,  ovlp_thresh =   1.00E-01
+     Step    1 :  tau =   0.0500,  Nw for selection =     15,  ratio =   0.0075
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+         noci:s:        2           -76.026843         -76.049620        2.9960E-04     7.3333E-01
+         noci:s:        3           -76.049620         -76.073130        2.9551E-04     5.9947E-01
+     Step    2 :  tau =   0.1000,  Nw for selection =     12,  ratio =   0.0060
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+     Step    3 :  tau =   0.1500,  Nw for selection =     17,  ratio =   0.0085
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+     Step    4 :  tau =   0.2000,  Nw for selection =     15,  ratio =   0.0075
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+   Epoch   3 :  energy_thresh =   2.00E-04,  ovlp_thresh =   1.00E-01
+     Step    1 :  tau =   0.0500,  Nw for selection =     14,  ratio =   0.0070
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+     Step    2 :  tau =   0.1000,  Nw for selection =     14,  ratio =   0.0070
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+         noci:s:        4           -76.073130         -76.089491        2.0979E-04     7.4393E-01
+     Step    3 :  tau =   0.1500,  Nw for selection =     13,  ratio =   0.0065
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+     Step    4 :  tau =   0.2000,  Nw for selection =     18,  ratio =   0.0090
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+   Epoch   4 :  energy_thresh =   1.41E-04,  ovlp_thresh =   1.00E-01
+     Step    1 :  tau =   0.0500,  Nw for selection =     11,  ratio =   0.0055
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+     Step    2 :  tau =   0.1000,  Nw for selection =     22,  ratio =   0.0110
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+     Step    3 :  tau =   0.1500,  Nw for selection =     21,  ratio =   0.0105
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+     Step    4 :  tau =   0.2000,  Nw for selection =     19,  ratio =   0.0095
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+   Epoch   5 :  energy_thresh =   1.00E-04,  ovlp_thresh =   1.00E-01
+     Step    1 :  tau =   0.0500,  Nw for selection =     14,  ratio =   0.0070
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+     Step    2 :  tau =   0.1000,  Nw for selection =     12,  ratio =   0.0060
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+         noci:s:        5           -76.089491         -76.099325        1.2660E-04     8.3094E-01
+     Step    3 :  tau =   0.1500,  Nw for selection =     15,  ratio =   0.0075
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+     Step    4 :  tau =   0.2000,  Nw for selection =     18,  ratio =   0.0090
+                  NOCI size     old NOCI energy    new NOCI energy    energy residual  ovlp residual 
+                  =========     ===============    ===============    ===============  ============= 
+ 
+ Final number of NOCI determinants            5
+             det no.         |c_i|^2        weight          H_ii           E_i      
+             =======         =======        ======          ====           ===      
+  noci:f:     1              0.9385         0.3703        -76.0268       -76.0993
+  noci:f:     2              0.0298         0.1967        -74.7930       -73.7800
+  noci:f:     3              0.0138         0.2215        -74.8104       -72.1657
+  noci:f:     4              0.0126         0.1195        -73.9228       -71.8719
+  noci:f:     5              0.0053         0.0919        -73.1768       -71.2712
+ 
+ determinant of the overlap matrix is = 
+ (7.384710831337288E-002,-1.530310420331886E-017)
+ 
+      finished at: Nov 15 2025  20:45:48
+ 
+ ***************************************************************************

@@ -1,0 +1,10 @@
+write_files = 0
+
+hfock = .true.
+use_diis = .true.
+uhf_mix = 0.0
+rdm_tol = 1.0e-06
+hf_tol = 1.0e-08
+
+ispin = 2
+spin = 2

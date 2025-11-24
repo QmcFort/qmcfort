@@ -1,0 +1,28 @@
+write_files = 0
+
+ispin = 2
+spin = 0
+
+brng = lcg48
+
+afqmc = .true.
+  projection = phaseless
+  hybrid = 1.0
+  afqmc_mix = 1.0
+
+  subtract_mean_field = .true.
+  importance_sampling_shift = mix
+  importance_sampling_scale = none
+
+  nwalkers = 300
+  tau = 0.1
+  nblocks = 25
+  eqblocks = 5
+  steps_per_block = 20
+  reorth = 1
+
+  growth_est_active = .true.
+  growth_est_period = 10
+  growth_est_damp = 0.05
+  
+  pop = 10
